@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -55,7 +54,6 @@ namespace DataStreamSimulation
 
             while (currentTime < simulationLength)
             {
-                Debug.WriteLine(streamEvents.Count);
                 streamEvents = streamEvents.OrderBy(x => x.Time).ToList(); //Order queue by time with each iteration
 
                 if (streamEvents[0].Type == "FragmentDownloaded")
